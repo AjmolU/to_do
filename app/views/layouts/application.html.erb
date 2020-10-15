@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <p id="notice"> <%= notice %> </p>
+    <p id="alert"> <%= alert %> </p>
     <h1>To Do</h1>
     <% if current_user %>
       Welcome <%= current_user.username %><br>
