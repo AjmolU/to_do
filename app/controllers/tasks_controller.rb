@@ -43,7 +43,7 @@ class TasksController < ApplicationController
   def complete
     @task = Task.find(params[:id])
     @task.update_attribute(:completed, params[:completed])
-    redirect_to tasks_path
+    redirect_back(fallback_location: root_path)
   end
 
   private 

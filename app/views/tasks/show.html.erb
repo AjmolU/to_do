@@ -1,7 +1,8 @@
 
 <h3><%= @task.title %></h3>
-<p>
-  <em><%= @task.details %></em>
+<p><em><%= @task.details %></em></p>
+<p>Completed? <%= link_to check_box_tag(:task, :completed, @task.completed), 
+                  "/tasks/#{@task.id}/complete/#{!@task.completed}" %>
 </p>
 <p>
   <%= link_to 'Edit', edit_task_path(@task) %>
